@@ -14,13 +14,6 @@ export class GuiModel {
                     "url": "/friend",
                     "formFieldList": [
                         {
-                            "id": "nickname",
-                            "type": "text",
-                            "name": "Nickname",
-                            "width": 2,
-                            "required": true
-                        },
-                        {
                             "id": "familyName",
                             "type": "text",
                             "name": "FamilyName",
@@ -32,6 +25,13 @@ export class GuiModel {
                             "type": "text",
                             "name": "FirstName",
                             "width": 1,
+                            "required": true
+                        },
+                        {
+                            "id": "nickname",
+                            "type": "text",
+                            "name": "Nickname",
+                            "width": 2,
                             "required": true
                         },
                         {
@@ -145,6 +145,13 @@ export class GuiModel {
                             "color": "yellow",
                             "page": "locationspage",
                         },
+                        {
+                            "type": "button",
+                            "name": "Groups",
+                            "icon": "fa-weixin",
+                            "color": "wisteria",
+                            "page": "groupspage",
+                        },
                     ]
                 },
                 {
@@ -202,6 +209,23 @@ export class GuiModel {
                         },
                     ]
                 },
+                {
+                    "id": "groupspage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "NewGroup",
+                            "icon": "fa-weixin",
+                            "color": "green",
+                            "form": {
+                                "form": "GroupForm"
+                            }
+                        }
+                    ]
+                }
             ]
         }
     };
